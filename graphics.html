@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+<title>Gallery</title>
+    <head>
+      <link rel="stylesheet" type="text/css" href="style.css">
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+      <link href="https://unpkg.com/ionicons@4.5.9-1/dist/css/ionicons.min.css" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Lato|Open+Sans|Roboto|Yeseva+One&display=swap" rel="stylesheet">
+    </head>
+
+    <header>
+      <center>
+        <div class="boldfont" id="title">
+        <img src="images/sig.jpeg" id="sig">
+        <br></br>
+        PORTFOLIO</center>
+      </div>
+      <center>
+        <nav>
+          <ul class="navigation" style="">
+            <li><a id="boldword" href="index.html"> HOME</a></li>
+            <li><a id="boldword" href="about.html"> ABOUT</a></li>
+            <li><a id="boldword" href="gallery.html"> GALLERY</a></li>
+            <li><a id="boldword" href="graphics.html"> GRAPHICS </a></li>
+            <li><a id="boldword" href="contact.html"> CONTACT </a></li>
+          </ul>
+        </nav>
+      </center>
+
+    </header>
+    <body>
+      <section style="margin-left: 10%; margin-right: 10%; margin-top: 5%;margin-bottom:5%;">
+
+
+    <img src="images/GPA.jpg" onclick="openModal();currentSlide(1)" style="width:35.8%; height:35%; padding:5px;" class="fad">
+    <img src="images/head.jpg" onclick="openModal();currentSlide(2)" style="width:35.8%; height:35%; padding:5px;" class="fad">
+    <img src="images/coy.jpg" onclick="openModal();currentSlide(3)" style="width:24.8%; height:24.8%; padding:5px;" class="fad">
+    <img src="images/bp.jpg" onclick="openModal();currentSlide(4)" style="width:35.8%; padding:5px;" class="fad">
+    <img src="images/symb.jpg" onclick="openModal();currentSlide(5)" style="width:30.8%; padding:5px;" class="fad">
+    <img src="images/phone.jpg" onclick="openModal();currentSlide(6)" style="width:29.8%; padding:5px;"  class="fad">
+    <img src="images/stamp.jpg" onclick="openModal();currentSlide(7)" style="width:26.8%; padding:5px;"  class="fad">
+    <img src="images/rec.jpg" onclick="openModal();currentSlide(8)" style="width:42.8%; padding:5px;" class="fad">
+    <img src="images/storm.jpg" onclick="openModal();currentSlide(9)" style="width:26.8%; padding:5px;" class="fad">
+    <img src="images/msa.jpg" onclick="openModal();currentSlide(10)" style="width:20.8%; padding:5px;" class="fad">
+    <img src="images/wb.jpg" onclick="openModal();currentSlide(11)" style="width:44.8%; padding:5px;" class="fad">
+    <img src="images/bee.jpg" onclick="openModal();currentSlide(12)" style="width:31.4%; padding:5px;"  class="fad">
+
+
+</section>
+
+
+<!-- The Modal/Lightbox -->
+<div id="myModal" class="modal">
+  <span class="close cursor" onclick="closeModal()">&times;</span>
+  <div class="modal-content">
+
+    <div class="mySlides">
+      <div class="numbertext">1 / 12</div>
+      <div class="demo">
+        <figure>
+        <img src="images/GPA.jpg" style="width:100%;" alt="nature" id="cap">
+        <figcaption id="fig-cap">An Unequal Balance: Published Dec. 19, 2018 / Volume 54, Issue 3. <br></br><button><a target="_blank" id="link" href="https://issuu.com/ghevergreen/docs/december_merged">Read more on the front page</a></button></figcaption></figure>
+      </div>
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">2 / 12</div>
+      <figure>
+      <img src="images/head.jpg" style="width:90%; height: 90%;" class="cent" id="cap">
+      <figcaption id="fig-cap">Common Curriculum: Published April 24, 2019 / Volume 54, Issue 5. <br></br><button><a target="_blank" id="link" href="https://issuu.com/ghevergreen/docs/april_merged"</figcaption>Read more on page 6</a></button></figure>
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">3 / 12</div>
+      <figure>
+      <img src="images/coy.jpg" style="width:70%; height: 70%;" class="cent" id="cap">
+      <figcaption id="fig-cap">Coyote Conundrum: Published Feb. 20, 2019 / Volume 54, Issue 4. <br></br><button><a target="_blank" id="link"href="https://issuu.com/ghevergreen/docs/merged_pdf"</figcaption>Read more on page 6</a></button></figure>
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">4 / 12</div>
+      <figure>
+      <img src="images/bp.jpg" style="width:70%; height: 70%;" class="cent" id="cap">
+      <figcaption id="fig-cap">The Most Stressful Time of Year: Published April 24, 2019 / Volume 54, Issue 5. <br></br><button><a id="link" target="_blank" href="https://issuu.com/ghevergreen/docs/april_merged"</figcaption>Read more on page 9</a></button></figure>
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">5 / 12</div>
+      <figure>
+      <img src="images/symb.jpg" style="width:70%" class="cent" id="cap">
+      <figcaption id="fig-cap">The Holiday Debate: Published Dec. 19, 2018 / Volume 54, Issue 3. <br></br> <button><a id="link" target="_blank" href="https://issuu.com/ghevergreen/docs/december_merged"</figcaption>Read more on page 9</a></button></figcaption></figure>
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">6 / 12</div>
+      <figure>
+      <img src="images/phone.jpg" style="width:80%" id="cap" class="cent">
+      <figcaption id="fig-cap"> A Middle School Unplugged: Published Feb. 20, 2019 / Volume 54, Issue 4. <br></br> <button><a id="link" target="_blank" href="https://issuu.com/ghevergreen/docs/merged_pdf"</figcaption">Read more on page 6</a></button></figcaption></figure>
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">7 / 12</div>
+      <figure>
+      <img src="images/stamp.jpg" style="width:60%" id="cap" class="cent">
+      <figcaption id="fig-cap"> A Reflection of Racism in America: Published April 24, 2019 / Volume 54, Issue 5.<br></br> <button><a id="link" target="_blank" href="https://issuu.com/ghevergreen/docs/april_merged"</figcaption">Read more on page 3</a></button></figcaption></figure>
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">8 / 12</div>
+      <figure>
+      <img src="images/rec.jpg" style="width:80%" id="cap" class="cent">
+      <figcaption id="fig-cap"> The Search for a Sports Star: Published April 24, 2019/ Volume 54, Issue 5. <br></br> <button><a id="link" target="_blank" href="https://issuu.com/ghevergreen/docs/april_merged"</figcaption">Read more on page 3</a></button></figcaption></figure>
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">9 / 12</div>
+      <figure>
+      <img src="images/storm.jpg" style="width:60%; height: 60%;" id="cap" class="cent">
+      <figcaption id="fig-cap"> The Pain of Microagressions: Published May 24, 2019 / Volume 54, Issue 6. <br></br> <button><a id="link" target="_blank" href="https://issuu.com/ghevergreen/docs/may_2019"</figcaption">Read more on page 19</a></button></figcaption></figure>
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">10 / 12</div>
+      <figure>
+      <img src="images/msa.jpg" style="width:60%; height:60%;" id="cap" class="cent">
+      <figcaption id="fig-cap"> The Aftermath of Attacks: Published May 24, 2019 / Volume 54, Issue 6. <br></br> <button><a id="link" target="_blank" href="https://issuu.com/ghevergreen/docs/may_2019"</figcaption">Read more on page 19</a></button></figcaption></figure>
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">11 / 12</div>
+      <figure>
+      <img src="images/wb.jpg" style="width:80%" id="cap" class="cent">
+      <figcaption id="fig-cap"> The New Scientific Method: Published May 24, 2019 / Volume 54, Issue 6.
+      <br></br> <button><a id="link" target="_blank" href="https://issuu.com/ghevergreen/docs/may_2019"</figcaption">Read more on page 19</a></button></figcaption></figure>
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">12 / 12</div>
+      <figure>
+      <img src="images/bee.jpg" style="width:80%" id="cap" class="cent">
+      <figcaption id="fig-cap"> New Program Seeks Computer Conformity: Published Dec. 18, 2019 / Volume 55, Issue 3.
+        <br></br> <button><a id="link" target="_blank" href="https://issuu.com/ghevergreen/docs/december_merged_4cf927e5a96bd4"</figcaption">Read more on page 2</a></button></figcaption></figure>
+</figcaption></figure>
+    </div>
+
+
+    <!-- Next/previous controls -->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+  </div>
+</div>
+        <script>
+          // Open the Modal
+            function openModal() {
+              document.getElementById("myModal").style.display = "block";
+            }
+
+            // Close the Modal
+            function closeModal() {
+              document.getElementById("myModal").style.display = "none";
+            }
+
+            var slideIndex = 1;
+            showSlides(slideIndex);
+
+            // Next/previous controls
+            function plusSlides(n) {
+              showSlides(slideIndex += n);
+            }
+
+            // Thumbnail image controls
+            function currentSlide(n) {
+              showSlides(slideIndex = n);
+            }
+
+
+            function showSlides(n) {
+              var i;
+              var slides = document.getElementsByClassName("mySlides");
+              var dots = document.getElementsByClassName("demo");
+              var captionText = document.getElementById("caption");
+              if (n > slides.length) {slideIndex = 1}
+              if (n < 1) {slideIndex = slides.length}
+              for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+              }
+              for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+              }
+              slides[slideIndex-1].style.display = "block";
+              dots[slideIndex-1].className += " active";
+              captionText.innerHTML = slides[slideIndex-1].alt
+
+            }
+        </script>
+
+
+          <script src="https://unpkg.com/ionicons@4.5.9-1/dist/ionicons.js"></script>
+      <!-- <br></br> -->
+      </section>
+      </body>
+
+      <footer>
+        <center>
+        <a href="https://www.instagram.com/sarah._.luan/" id="ig" style ="font-size: 32px; color: black; margin-left: 30px;"><ion-icon name="logo-instagram"></ion-icon></a>
+        <a href="mailto:sluanus@gmail.com" style ="font-size: 32px; color: black; padding:8px;"><ion-icon name="mail"></ion-icon></a>
+        </center>
+        <center style="padding: 5px; margin-bottom: 20px;">© January 2020 Sarah Luan | Copyright</center>
+      </footer>
+  </html>

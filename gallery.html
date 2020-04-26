@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<title>Gallery</title>
+    <head>
+      <link rel="stylesheet" type="text/css" href="style.css">
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+      <link href="https://unpkg.com/ionicons@4.5.9-1/dist/css/ionicons.min.css" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Lato|Open+Sans|Roboto|Yeseva+One&display=swap" rel="stylesheet">
+    </head>
+
+    <header>
+      <center>
+        <div class="boldfont" id="title">
+        <img src="images/sig.jpeg" id="sig">
+        <br></br>
+        PORTFOLIO</center>
+      </div>
+      <center>
+        <nav>
+          <ul class="navigation" style="">
+            <li><a id="boldword" href="index.html"> HOME</a></li>
+            <li><a id="boldword" href="about.html"> ABOUT</a></li>
+            <li><a id="boldword" href="gallery.html"> GALLERY</a></li>
+            <li><a id="boldword" href="graphics.html"> GRAPHICS </a></li>
+            <li><a id="boldword" href="contact.html"> CONTACT </a></li>
+          </ul>
+        </nav>
+      </center>
+
+    </header>
+    <body>
+      <section style="margin-left: 12%; margin-right: 12%; margin-top: 5%;margin-bottom:5%;">
+
+
+    <img src="images/gh.jpg.jpeg" onclick="openModal();currentSlide(1)" id="skool" class="fad">
+    <img src="images/mich.jpg.jpeg" onclick="openModal();currentSlide(2)" id="mich-por" class="fad">
+    <img src="images/sketch.jpeg" onclick="openModal();currentSlide(3)" id="man" class="fad">
+    <img src="images/sar.jpeg" onclick="openModal();currentSlide(4)" id="sar" class="fad">
+    <img src="images/fish.jpeg" onclick="openModal();currentSlide(5)" id="fish" class="fad">
+    <img src="images/hua.jpeg" onclick="openModal();currentSlide(6)" id="hua" class="fad">
+</section>
+
+
+<!-- The Modal/Lightbox -->
+<div id="myModal" class="modal">
+  <span class="close cursor" onclick="closeModal()">&times;</span>
+  <div class="modal-content">
+
+    <div class="mySlides">
+      <div class="numbertext">1 / 6</div>
+      <div class="demo">
+        <figure>
+        <img src="images/gh.jpg.jpeg" style="width:100%;" alt="nature" id="cap">
+        <figcaption id="fig-cap">Greenhill. Oil on canvas. 2019.</figcaption></figure>
+      </div>
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">2 / 6</div>
+      <figure>
+      <img src="images/mich.jpg.jpeg" style="width:70%; height: 70%;" class="cent" id="cap">
+      <figcaption id="fig-cap">Michelle and Her Favorite Things. Oil on canvas. 2019.</figcaption></figure>
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">3 / 6</div>
+      <figure>
+      <img src="images/hua.jpeg" style="width:70%; height: 70%;" class="cent" id="cap">
+      <figcaption id="fig-cap">Flowers. Watercolor. 2019.</figcaption></figure>
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">4 / 6</div>
+      <figure>
+      <img src="images/sar.jpeg" style="width:70%; height: 70%;" class="cent" id="cap">
+      <figcaption id="fig-cap">Self-Portrait. Charcoal, oil pastel. 2018.</figcaption></figure>
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">5 / 6</div>
+      <figure>
+      <img src="images/sketch.jpeg" style="width:70%" class="cent" id="cap">
+      <figcaption id="fig-cap">Man Sitting. White color pencil. 2018.</figcaption></figure>
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">6 / 6</div>
+      <figure>
+      <img src="images/fish.jpeg" style="width:80%" id="cap" class="cent">
+      <figcaption id="fig-cap"> Fish in a Pond. Pen. 2019.</figcaption></figure>
+    </div>
+
+
+    <!-- Next/previous controls -->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+
+
+
+  </div>
+</div>
+
+
+        <script>
+          // Open the Modal
+            function openModal() {
+              document.getElementById("myModal").style.display = "block";
+            }
+
+            // Close the Modal
+            function closeModal() {
+              document.getElementById("myModal").style.display = "none";
+            }
+
+            var slideIndex = 1;
+            showSlides(slideIndex);
+
+            // Next/previous controls
+            function plusSlides(n) {
+              showSlides(slideIndex += n);
+            }
+
+            // Thumbnail image controls
+            function currentSlide(n) {
+              showSlides(slideIndex = n);
+            }
+
+
+            function showSlides(n) {
+              var i;
+              var slides = document.getElementsByClassName("mySlides");
+              var dots = document.getElementsByClassName("demo");
+              var captionText = document.getElementById("caption");
+              if (n > slides.length) {slideIndex = 1}
+              if (n < 1) {slideIndex = slides.length}
+              for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+              }
+              for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+              }
+              slides[slideIndex-1].style.display = "block";
+              dots[slideIndex-1].className += " active";
+              captionText.innerHTML = slides[slideIndex-1].alt
+
+            }
+        </script>
+
+
+          <script src="https://unpkg.com/ionicons@4.5.9-1/dist/ionicons.js"></script>
+      <!-- <br></br> -->
+      </section>
+      </body>
+
+      <footer>
+        <center>
+        <a href="https://www.instagram.com/sarah._.luan/" id="ig" style ="font-size: 32px; color: black; margin-left: 30px;"><ion-icon name="logo-instagram"></ion-icon></a>
+        <a href="mailto:sluanus@gmail.com" style ="font-size: 32px; color: black; padding:8px;"><ion-icon name="mail"></ion-icon></a>
+        </center>
+        <center style="padding: 5px; margin-bottom: 20px;">© January 2020 Sarah Luan | Copyright</center>
+      </footer>
+  </html>
